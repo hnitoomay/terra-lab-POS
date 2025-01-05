@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="output" src="noimage.jpg" alt="Preview" style="width: 100px; height: 100px;">
+<input type="file" onchange="loadFile(event)">
+<script>
+    function loadFile(event) {
+        var reader = new FileReader();
+        reader.onload = function () {
+            document.getElementById('output').src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    }
+</script>
+
+</body>
+</html>
