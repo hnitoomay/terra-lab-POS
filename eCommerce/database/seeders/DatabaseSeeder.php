@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
             'password'=> Hash::make('password'),
             'role'=>'admin',
         ]);
-
+        ////newpassword updated
 
     }
 }
